@@ -21,23 +21,6 @@ class hangmangame:
     def display(self):
         print(' '.join(self.hidden))
 
-    # def get_guess(self):
-    #     while self.wrongGuess < self.maxwrong and '_' in self.hidden:
-    #         guess = input("Guess a letter: ").upper()
-    #         if len(guess) == 1 and guess.isalpha():
-    #             if guess not in self.guessed:
-    #                 self.guessed.append(guess) 
-    #                 return guess
-    #             else:
-    #                 print("You already guessed that letter.")
-    #                 self.wrongGuess += 1
-    #         else:
-    #             print("Invalid input. Please enter a single alphabet.")
-
-    #         self.display()
-    #         self.hangman()
-    #         print(f"Incorrect guesses: {self.wrongGuess}")
-
     def updateHidden(self, guess):
         for i, letter in enumerate(self.selected):
             if letter == guess:
